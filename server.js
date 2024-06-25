@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use(cors(
     {
-        origin:"http://localhost:3000",
+        origin:["http://localhost:3000","https://mern-app-1-frontend-rose.vercel.app"],
         method:["GET","POST","DELETE","PATCH"],
         credentials:true
     }
