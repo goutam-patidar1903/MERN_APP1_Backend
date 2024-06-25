@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use(CORS(
     {
-        origin:["http://localhost:3000"],
+        origin:"http://localhost:3000",
         method:["GET","POST","DELETE","PATCH"],
         credentials:true
     }
