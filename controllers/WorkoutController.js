@@ -48,7 +48,7 @@ const createWorkout = async (req,res)=>{
 //delete a single workout
 const deleteWorkout = async (req,res)=>{
     const {id}=req.params
-
+    console.log("$$$$$$$$$");
     if(!mongoose.Types.ObjectId.isValid(id)){
         return res.status(404).json({error:'ID is not in a valid format'})
     }
