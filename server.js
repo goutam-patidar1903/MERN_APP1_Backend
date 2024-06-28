@@ -13,7 +13,9 @@ app.use(express.json())
 
 app.use(cors(
     {
-        origin:"https://mern-app-1-frontend-rose.vercel.app",
+        origin:'*', // allow accept request from any origin
+        // origin:"http://localhost:3000",     // allow only accept request came from local machine
+        // origin:"https://mern-app-1-frontend-rose.vercel.app", // allow only accept request came from our deployed app
         method:["GET","POST","DELETE","PATCH"],
         credentials:true
     }
@@ -39,3 +41,4 @@ mongoose.connect(process.env.MONGO_URI).then(()=>{
 }).catch((error)=>{
     console.log(error)
 })
+
